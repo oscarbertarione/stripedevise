@@ -1,0 +1,27 @@
+<%= form_with(model: apunte, local: true) do |form| %>
+  <% if apunte.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apunte.errors.count, "error") %> prohibited this apunte from being saved:</h2>
+
+      <ul>
+      <% apunte.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :apunte_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :leccion_id %>
+    <%= form.number_field :leccion_id, id: :apunte_leccion_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

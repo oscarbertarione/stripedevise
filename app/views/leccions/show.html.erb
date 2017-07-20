@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @leccion.number %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @leccion.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @leccion.summary %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @leccion.content %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @leccion.video %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @leccion.curso_id %>
+</p>
+
+<%= link_to 'Edit', edit_leccion_path(@leccion) %> |
+<%= link_to 'Back', leccions_path %>

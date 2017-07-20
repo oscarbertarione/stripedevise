@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @curso.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @curso.summary %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @curso.content %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= image_tag @curso.icon.url(:thumb) %>
+</p>
+
+<%= link_to 'Edit', edit_curso_path(@curso) %> |
+<%= link_to 'Back', cursos_path %>
